@@ -1,0 +1,38 @@
+media:
+  input: public/images/uploads
+  output: /images/uploads
+
+content:
+  - name: blog
+    label: Blog
+    path: src/content/blog
+    type: collection
+    view:
+      fields: [title, date, category]
+    fields:
+      - name: title
+        label: Judul
+        type: string
+        required: true
+      - name: date
+        label: Tanggal
+        type: date
+      - name: category
+        label: Kategori
+        type: select
+        options:
+          values: [Random Finds, Hidden Gems]
+      - name: label
+        label: Label
+        type: select
+        options:
+          values: [Worth Trying, Recommended]
+      - name: thumbnail
+        label: Thumbnail
+        type: image
+      - name: excerpt
+        label: Kalimat Pemancing
+        type: string
+      - name: body
+        label: Konten
+        type: rich-text
