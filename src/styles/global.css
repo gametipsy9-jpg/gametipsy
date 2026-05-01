@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+@font-face {
+  font-family: 'Honk';
+  src: url('https://fonts.gstatic.com/s/honk/v8/qkBXXvoE4TM_-RxFO0c.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 a,
 .btn {
