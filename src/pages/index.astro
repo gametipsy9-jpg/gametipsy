@@ -12,9 +12,9 @@ const description = "Buat lo yang udah capek sama game AAA, di sini lo bakal nem
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta name="generator" content={generator} />
-    <title>GAMETIPSY — Game aneh, tapi bikin nagih</title>
+    <title>GAmeTIPSY — Game aneh, tapi bikin nagih</title>
     <meta name="description" content={description} />
-    <meta property="og:title" content="GAMETIPSY" />
+    <meta property="og:title" content="GAmeTIPSY" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={site} />
@@ -44,22 +44,23 @@ const description = "Buat lo yang udah capek sama game AAA, di sini lo bakal nem
         <span class="gradient-text">GAme</span>TIPSY
       </h1>
       <p class="max-w-xl text-lg sm:text-xl text-offset leading-relaxed mb-10">
-        Buat lo yang udah <span class="gradient-text font-semibold">capek sama game AAA</span> <br />
-        di sini lo bakal nemuin <span class="gradient-text font-semibold">game random yang jarang dilirik</span> tapi surprisingly worth it.
+        Buat lo yang udah capek sama game AAA —<br />
+        di sini lo bakal nemuin game <span class="gradient-text font-semibold">random yang jarang dilirik</span> tapi surprisingly worth it.
       </p>
       <div class="flex flex-col sm:flex-row gap-4">
         <a href="#latest" class="btn-primary px-6 py-3 rounded-full text-sm font-semibold">
-          Lihat Artikel 
+          Lihat Artikel →
         </a>
         <a href="#kenapa" class="btn-secondary px-6 py-3 rounded-full text-sm font-semibold">
-          Tentang Gametipsy
+          Kenapa GAmeTIPSY?
         </a>
       </div>
     </section>
 
     <!-- FEATURED -->
     <section id="featured" class="px-8 py-20 max-w-6xl mx-auto">
-      <h2 class="text-2xl font-bold mb-2"> Artikel Terbaru</h2>
+      <h2 class="text-2xl font-bold mb-2">🔥 Artikel Terbaru</h2>
+      <p class="text-offset text-sm mb-10">Game random pilihan minggu ini</p>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
         {[1,2,3].map((i) => (
           <div class="card-article group rounded-2xl overflow-hidden border border-default bg-offset">
@@ -80,15 +81,16 @@ const description = "Buat lo yang udah capek sama game AAA, di sini lo bakal nem
       </div>
     </section>
 
-    <!-- TENTANG GAMETIPSY -->
+    <!-- KENAPA GAMETIPSY -->
     <section id="kenapa" class="px-8 py-20 bg-offset">
       <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-2xl font-bold mb-2">TENTANG GAMETIPSY?</h2>
+        <h2 class="text-2xl font-bold mb-2">Kenapa GAmeTIPSY?</h2>
+        <p class="text-offset text-sm mb-12">Bukan review profesional. Bukan portal berita.</p>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
           {[
-            { title: "Game Obscure", desc: "Game-game yang jarang dilirik tapi punya charm tersendiri. Lo gak bakal nemuin ini di chart Steam." },
-            { title: "Kayak Temen", desc: "Nulis kayak ngobrol sama temen yang selalu tahu game random yang ternyata bikin nagih." },
-            { title: "Langsung ke Point", desc: "Gak bertele-tele. Lo langsung tahu apakah game ini worth dicoba atau enggak." },
+            { icon: "🕹️", title: "Game Obscure", desc: "Game-game yang jarang dilirik tapi punya charm tersendiri. Lo gak bakal nemuin ini di chart Steam." },
+            { icon: "🤝", title: "Kayak Temen", desc: "Nulis kayak ngobrol sama temen yang selalu tahu game random yang ternyata bikin nagih." },
+            { icon: "⚡", title: "Langsung ke Point", desc: "Gak bertele-tele. Lo langsung tahu apakah game ini worth dicoba atau enggak." },
           ].map(({ icon, title, desc }) => (
             <div class="flex flex-col items-center gap-3">
               <span class="text-4xl">{icon}</span>
