@@ -1,33 +1,25 @@
 ---
 import { Icon } from "astro-icon/components";
 ---
-
-<!--
-  negative margin is sum of button width (6) and gap size of flex parent (6)
-  TODO don't hardcode these values
--->
 <button
   id="theme-switcher"
   type="button"
-  class="-ml-12 origin-[right_center] scale-0 transition-all duration-500"
+  class="transition-all duration-200 hover:text-secondary"
 >
   <div id="icon-theme-light">
-    <Icon name="mdi:white-balance-sunny" class="size-6" />
+    <Icon name="mdi:white-balance-sunny" class="size-5" />
     <span class="sr-only">Use light theme</span>
   </div>
   <div id="icon-theme-dark" class="hidden">
-    <Icon name="mdi:weather-night" class="size-6" />
+    <Icon name="mdi:weather-night" class="size-5" />
     <span class="sr-only">Use dark theme</span>
   </div>
 </button>
-
 <script>
   import invariant from "tiny-invariant";
-
   const themes = ["light", "dark"];
   const button = document.querySelector("#theme-switcher");
   invariant(button, "button should not be null");
-
   const getThemeCurrent = () => document.documentElement.dataset.theme;
   const getThemeNext = () => {
     const themeCurrent = getThemeCurrent();
@@ -35,30 +27,17 @@ import { Icon } from "astro-icon/components";
     const indexThemeCurrent = themes.indexOf(themeCurrent);
     return themes[(indexThemeCurrent + 1) % themes.length];
   };
-
   const updateIcon = () => {
     const themeCurrent = getThemeCurrent();
-    document
-      .querySelector(`#icon-theme-${themeCurrent}`)
-      ?.classList.add("hidden");
+    document.querySelector(`#icon-theme-${themeCurrent}`)?.classList.add("hidden");
     const themeNext = getThemeNext();
-    document
-      .querySelector(`#icon-theme-${themeNext}`)
-      ?.classList.remove("hidden");
+    document.querySelector(`#icon-theme-${themeNext}`)?.classList.remove("hidden");
   };
-
   button.addEventListener("click", () => {
     const themeNext = getThemeNext();
     document.documentElement.dataset.theme = themeNext;
     localStorage.setItem("theme", themeNext);
     updateIcon();
   });
-
   updateIcon();
 </script>
-
-<style>
-  :global(.fixed-header) #theme-switcher {
-    @apply ml-0 scale-100;
-  }
-</style>
