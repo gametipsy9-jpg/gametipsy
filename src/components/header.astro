@@ -4,41 +4,62 @@ import { Icon } from "astro-icon/components";
 ---
 <header
   id="page-header"
-  class="fixed top-0 z-50 flex w-full items-center justify-between border-b border-transparent px-8 py-4 transition-all duration-300"
+  class="fixed top-0 z-50 flex w-full items-center justify-between px-8 py-4 transition-all duration-300 border-b border-transparent"
 >
-  <a href="/" class="logo-font text-2xl font-bold hover:opacity-80 transition-opacity">
-    <span class="gradient-text">GAme</span>TIPSY
+  <a href="/" class="text-xl font-bold hover:opacity-80 transition-opacity">
+    <span class="gradient-text">Game</span>tipsy
   </a>
 
-  <div class="flex items-center gap-6">
+  <div class="flex items-center gap-5">
     <nav class="hidden sm:block">
       <ul class="flex items-center gap-6 text-sm">
         <li><a href="#featured" class="hover:text-secondary transition-colors">Artikel</a></li>
-        <li><a href="#kenapa" class="hover:text-secondary transition-colors">Kenapa?</a></li>
         <li><a href="#kategori" class="hover:text-secondary transition-colors">Kategori</a></li>
       </ul>
     </nav>
-    <button id="open-nav-button" type="button" class="sm:hidden" aria-label="Navigation">
-      <Icon name="mdi:menu" class="size-6" />
+
+    <!-- Search -->
+    <button id="search-toggle" type="button" aria-label="Search" class="hover:text-secondary transition-colors">
+      <Icon name="mdi:magnify" class="size-5" />
     </button>
+
     <ThemeSwitcher />
+
+    <button id="open-nav-button" type="button" class="sm:hidden" aria-label="Navigation">
+      <Icon name="mdi:menu" class="size-5" />
+    </button>
+  </div>
+
+  <!-- Search bar -->
+  <div id="search-bar" class="hidden absolute top-full left-0 w-full border-b border-default bg-default px-8 py-3">
+    <div class="max-w-2xl mx-auto flex items-center gap-3">
+      <Icon name="mdi:magnify" class="size-5 text-offset flex-shrink-0" />
+      <input
+        id="search-input"
+        type="text"
+        placeholder="Cari artikel..."
+        class="w-full bg-transparent text-sm outline-none placeholder:text-offset"
+      />
+      <button id="search-close" type="button" aria-label="Close search" class="hover:text-secondary transition-colors flex-shrink-0">
+        <Icon name="mdi:close" class="size-5" />
+      </button>
+    </div>
   </div>
 
   <!-- Mobile menu -->
   <div id="menu-modal" class="hidden fixed inset-0 z-50 bg-default px-8 py-6" aria-hidden="true">
     <div role="dialog" aria-modal="true">
       <div class="flex justify-between items-center mb-8">
-        <span class="logo-font text-2xl font-bold">
-          <span class="gradient-text">GAme</span>TIPSY
+        <span class="text-xl font-bold">
+          <span class="gradient-text">Game</span>tipsy
         </span>
         <button id="close-nav-button" type="button" aria-label="Close navigation">
-          <Icon name="mdi:close" class="size-6" />
+          <Icon name="mdi:close" class="size-5" />
         </button>
       </div>
       <nav>
         <ul class="flex flex-col gap-6 text-xl font-semibold">
           <li><a href="#featured">Artikel</a></li>
-          <li><a href="#kenapa">Kenapa?</a></li>
           <li><a href="#kategori">Kategori</a></li>
         </ul>
       </nav>
@@ -51,6 +72,10 @@ import { Icon } from "astro-icon/components";
   const menuModal = document.querySelector("#menu-modal") as HTMLElement;
   const openBtn = document.querySelector("#open-nav-button");
   const closeBtn = document.querySelector("#close-nav-button");
+  const searchToggle = document.querySelector("#search-toggle");
+  const searchClose = document.querySelector("#search-close");
+  const searchBar = document.querySelector("#search-bar") as HTMLElement;
+  const searchInput = document.querySelector("#search-input") as HTMLInputElement;
 
   openBtn?.addEventListener("click", () => {
     menuModal.classList.remove("hidden");
@@ -65,6 +90,23 @@ import { Icon } from "astro-icon/components";
       menuModal.classList.add("hidden");
       menuModal.setAttribute("aria-hidden", "true");
     });
+  });
+
+  searchToggle?.addEventListener("click", () => {
+    searchBar.classList.toggle("hidden");
+    if (!searchBar.classList.contains("hidden")) {
+      searchInput.focus();
+    }
+  });
+  searchClose?.addEventListener("click", () => {
+    searchBar.classList.add("hidden");
+    searchInput.value = "";
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      searchBar.classList.add("hidden");
+      searchInput.value = "";
+    }
   });
 
   document.addEventListener("scroll", () => {
