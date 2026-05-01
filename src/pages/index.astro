@@ -1,74 +1,151 @@
 ---
-import "@fontsource-variable/inter";
-import Compatibility from "~/components/compatibility.astro";
-import Features from "~/components/features.astro";
-import Footer from "~/components/footer.astro";
 import Header from "~/components/header.astro";
-import Intro from "~/components/intro.astro";
-import Showcase from "~/components/showcase.astro";
-import Splash from "~/components/splash.astro";
+import Footer from "~/components/footer.astro";
 import "~/styles/index.css";
-
 const { generator, site } = Astro;
-const image = new URL("social.jpg", site);
-const description =
-  "Build fast websites, faster. Astro is a new kind of site builder for the modern web. Lightning-fast performance meets powerful developer experience.";
+const description = "Buat lo yang udah capek sama game AAA, di sini lo bakal nemuin game random yang jarang dilirik tapi surprisingly worth it.";
 ---
-
 <!doctype html>
-<html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
+<html lang="id" class="h-full motion-safe:scroll-smooth" data-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta name="generator" content={generator} />
-
-    <title>Astro Landing Page</title>
+    <title>GAmeTIPSY — Game aneh, tapi bikin nagih</title>
     <meta name="description" content={description} />
-
-    <!-- social media -->
-    <meta property="og:title" content="Astro" />
+    <meta property="og:title" content="GAmeTIPSY" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
     <meta property="og:url" content={site} />
     <meta name="twitter:card" content="summary_large_image" />
-
-    <!-- initialize theme -->
     <script is:inline>
       const themeSaved = localStorage.getItem("theme");
-
       if (themeSaved) {
         document.documentElement.dataset.theme = themeSaved;
       } else {
-        const prefersDark = window.matchMedia(
-          "(prefers-color-scheme: dark)",
-        ).matches;
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
         document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
       }
-
-      window
-        .matchMedia("(prefers-color-scheme: dark)")
-        .addEventListener("change", (event) => {
-          if (!localStorage.getItem("theme")) {
-            document.documentElement.dataset.theme = event.matches
-              ? "dark"
-              : "light";
-          }
-        });
+      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (event) => {
+        if (!localStorage.getItem("theme")) {
+          document.documentElement.dataset.theme = event.matches ? "dark" : "light";
+        }
+      });
     </script>
   </head>
-  <body
-    class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white"
-  >
+  <body class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white">
     <Header />
-    <Splash />
-    <div class="space-y-24 px-8 py-32">
-      <Intro />
-      <Features />
-      <Compatibility />
-      <Showcase />
-    </div>
+
+    <!-- HERO -->
+    <section class="hero-section flex min-h-screen flex-col items-center justify-center px-8 text-center pt-24 pb-16">
+      <p class="mb-4 text-sm uppercase tracking-widest text-offset">Selamat datang di</p>
+      <h1 class="logo-font text-6xl sm:text-8xl font-bold mb-6">
+        <span class="gradient-text">GAme</span>TIPSY
+      </h1>
+      <p class="max-w-xl text-lg sm:text-xl text-offset leading-relaxed mb-10">
+        Buat lo yang udah capek sama game AAA —<br />
+        di sini lo bakal nemuin game <span class="gradient-text font-semibold">random yang jarang dilirik</span> tapi surprisingly worth it.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="#latest" class="btn-primary px-6 py-3 rounded-full text-sm font-semibold">
+          Lihat Artikel →
+        </a>
+        <a href="#kenapa" class="btn-secondary px-6 py-3 rounded-full text-sm font-semibold">
+          Kenapa GAmeTIPSY?
+        </a>
+      </div>
+    </section>
+
+    <!-- FEATURED -->
+    <section id="featured" class="px-8 py-20 max-w-6xl mx-auto">
+      <h2 class="text-2xl font-bold mb-2">🔥 Artikel Terbaru</h2>
+      <p class="text-offset text-sm mb-10">Game random pilihan minggu ini</p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        {[1,2,3].map((i) => (
+          <div class="card-article group rounded-2xl overflow-hidden border border-default bg-offset">
+            <div class="aspect-video bg-gradient-to-br from-indigo-900 to-pink-900 flex items-center justify-center text-4xl">
+              🎮
+            </div>
+            <div class="p-5">
+              <span class="text-xs text-secondary uppercase tracking-wide">Random Finds</span>
+              <h3 class="mt-2 font-semibold text-base group-hover:gradient-text transition-colors">
+                Artikel akan muncul di sini
+              </h3>
+              <p class="text-offset text-sm mt-2 line-clamp-2">
+                Tulis artikel pertamamu lewat Pages CMS dan akan otomatis muncul di sini.
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- KENAPA GAMETIPSY -->
+    <section id="kenapa" class="px-8 py-20 bg-offset">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-2xl font-bold mb-2">Kenapa GAmeTIPSY?</h2>
+        <p class="text-offset text-sm mb-12">Bukan review profesional. Bukan portal berita.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          {[
+            { icon: "🕹️", title: "Game Obscure", desc: "Game-game yang jarang dilirik tapi punya charm tersendiri. Lo gak bakal nemuin ini di chart Steam." },
+            { icon: "🤝", title: "Kayak Temen", desc: "Nulis kayak ngobrol sama temen yang selalu tahu game random yang ternyata bikin nagih." },
+            { icon: "⚡", title: "Langsung ke Point", desc: "Gak bertele-tele. Lo langsung tahu apakah game ini worth dicoba atau enggak." },
+          ].map(({ icon, title, desc }) => (
+            <div class="flex flex-col items-center gap-3">
+              <span class="text-4xl">{icon}</span>
+              <h3 class="font-semibold text-base">{title}</h3>
+              <p class="text-offset text-sm leading-relaxed">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- KATEGORI -->
+    <section id="kategori" class="px-8 py-20 max-w-6xl mx-auto">
+      <h2 class="text-2xl font-bold mb-2">Kategori</h2>
+      <p class="text-offset text-sm mb-10">Game aneh datang dalam berbagai bentuk</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {[
+          { emoji: "🎲", title: "Random Finds", desc: "Game yang gue temuin secara random dan ternyata seru banget. Bisa dari mana aja — Steam, itch.io, bahkan flash games jadul." },
+          { emoji: "💎", title: "Hidden Gems", desc: "Game yang seharusnya lebih terkenal dari sekarang. Underrated, underplayed, tapi undeniably bagus." },
+        ].map(({ emoji, title, desc }) => (
+          <div class="rounded-2xl border border-default p-8 flex gap-5 hover:border-secondary transition-colors">
+            <span class="text-5xl">{emoji}</span>
+            <div>
+              <h3 class="font-bold text-lg mb-2">{title}</h3>
+              <p class="text-offset text-sm leading-relaxed">{desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- LATEST ARTICLES -->
+    <section id="latest" class="px-8 py-20 bg-offset">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-2xl font-bold mb-2">Latest Articles</h2>
+        <p class="text-offset text-sm mb-10">Semua artikel, diurutkan dari yang terbaru</p>
+        <div class="space-y-4">
+          {[1,2,3,4,5].map((i) => (
+            <div class="flex gap-4 items-start p-4 rounded-xl border border-default hover:border-secondary transition-colors group">
+              <div class="w-20 h-14 rounded-lg bg-gradient-to-br from-indigo-900 to-pink-900 flex-shrink-0 flex items-center justify-center text-2xl">
+                🎮
+              </div>
+              <div>
+                <span class="text-xs text-secondary uppercase tracking-wide">Hidden Gems</span>
+                <h3 class="font-semibold text-sm mt-1 group-hover:text-secondary transition-colors">
+                  Artikel akan muncul setelah kamu nulis lewat Pages CMS
+                </h3>
+                <p class="text-offset text-xs mt-1">30 April 2025</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
     <Footer />
   </body>
 </html>
