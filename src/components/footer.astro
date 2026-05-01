@@ -3,15 +3,15 @@ import { Icon } from "astro-icon/components";
 ---
 <footer class="border-t border-default px-8 py-16">
   <div class="max-w-6xl mx-auto">
-    <div class="grid grid-cols-1 sm:grid-cols-4 gap-10 mb-12">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 mb-12">
 
       <!-- Brand -->
       <div class="sm:col-span-2">
-        <p class="logo-font text-2xl font-bold mb-3">
-          <span class="gradient-text">GAme</span>TIPSY
+        <p class="text-xl font-bold mb-3">
+          <span class="gradient-text">Game</span>tipsy
         </p>
         <p class="text-offset text-sm leading-relaxed max-w-xs">
-          Game aneh, tapi bikin nagih. Rekomendasi game obscure buat lo yang udah capek sama game mainstream.
+          Game aneh, tapi bikin nagih. Rekomendasi game obscure buat lo yang udah bosan sama game mainstream.
         </p>
         <div class="flex gap-4 mt-6">
           <a href="https://twitter.com" aria-label="Twitter" class="hover:text-secondary transition-colors">
@@ -23,21 +23,12 @@ import { Icon } from "astro-icon/components";
         </div>
       </div>
 
-      <!-- Links -->
-      <div>
-        <p class="text-sm font-semibold mb-4 uppercase tracking-wide">Navigasi</p>
-        <ul class="space-y-3 text-sm text-offset">
-          <li><a href="#featured" class="hover:text-secondary transition-colors">Artikel</a></li>
-          <li><a href="#kenapa" class="hover:text-secondary transition-colors">Kenapa GAmeTIPSY?</a></li>
-          <li><a href="#kategori" class="hover:text-secondary transition-colors">Kategori</a></li>
-        </ul>
-      </div>
-
       <!-- Info -->
       <div>
         <p class="text-sm font-semibold mb-4 uppercase tracking-wide">Info</p>
         <ul class="space-y-3 text-sm text-offset">
           <li><a href="/about" class="hover:text-secondary transition-colors">About</a></li>
+          <li><a href="/sitemap" class="hover:text-secondary transition-colors">Sitemap</a></li>
           <li><a href="/privacy" class="hover:text-secondary transition-colors">Privacy Policy</a></li>
           <li><a href="/terms" class="hover:text-secondary transition-colors">Terms</a></li>
           <li><a href="/contact" class="hover:text-secondary transition-colors">Contact</a></li>
@@ -46,9 +37,11 @@ import { Icon } from "astro-icon/components";
 
     </div>
 
-    <div class="border-t border-default pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-offset">
-      <p>© 2025 GAmeTIPSY. Game aneh, tapi bikin nagih 🎮</p>
-      <p>Made with ☕ dan banyak jam gaming</p>
+    <div class="border-t border-default pt-8 flex flex-row justify-between items-center gap-4 text-xs text-offset">
+      <p>© 2026 Gametipsy</p>
+      <p class="flex items-center gap-1">
+        Made with <span class="gradient-text font-bold">♥</span> from gamer to gamer
+      </p>
     </div>
   </div>
 </footer>
