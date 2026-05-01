@@ -1,4 +1,5 @@
-/* TODO: consider creating <Button> and <GradientText> components */
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+
 a,
 .btn {
   @apply transition-colors duration-200;
@@ -9,4 +10,30 @@ a,
 .gradient-text {
   @apply bg-clip-text text-transparent;
   @apply bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-pink-500;
+}
+
+.logo-font {
+  font-family: 'Honk', system-ui, sans-serif;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-pink-500 text-white;
+  @apply hover:opacity-90 transition-opacity;
+}
+
+.btn-secondary {
+  @apply border border-current text-default;
+  @apply hover:text-secondary transition-colors;
+}
+
+.bg-offset {
+  background-color: var(--color-background-offset);
+}
+
+.text-offset {
+  color: var(--color-text-offset);
+}
+
+.border-default {
+  border-color: var(--color-border);
 }
