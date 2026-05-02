@@ -27,11 +27,6 @@ const latestPosts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.
     <script is:inline>
       const themeSaved = localStorage.getItem("theme");
       document.documentElement.dataset.theme = themeSaved ?? "dark";
-      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (event) => {
-        if (!localStorage.getItem("theme")) {
-          document.documentElement.dataset.theme = event.matches ? "dark" : "light";
-        }
-      });
     </script>
   </head>
   <body class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white font-sans">
