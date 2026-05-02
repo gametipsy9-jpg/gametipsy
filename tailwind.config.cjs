@@ -5,7 +5,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter Variable", ...defaultTheme.fontFamily.sans],
+        sans: ["Lora", ...defaultTheme.fontFamily.serif],
+        heading: ["Playfair Display", ...defaultTheme.fontFamily.serif],
+        quote: ["DM Serif Display", ...defaultTheme.fontFamily.serif],
+        ui: ["Roboto", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: "var(--color-primary)",
