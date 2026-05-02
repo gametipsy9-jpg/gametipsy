@@ -1,0 +1,159 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import Header from "~/components/header.astro";
+import Footer from "~/components/footer.astro";
+import "~/styles/index.css";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const post = await getEntry("blog", slug);
+const { Content } = await post.render();
+---
+<!doctype html>
+<html lang="id" class="h-full motion-safe:scroll-smooth" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <title>{post.data.title} — Gametipsy</title>
+    <meta name="description" content={post.data.excerpt ?? post.data.title} />
+    <script is:inline>
+      const themeSaved = localStorage.getItem("theme");
+      if (themeSaved) {
+        document.documentElement.dataset.theme = themeSaved;
+      } else {
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
+      }
+    </script>
+  </head>
+  <body class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white font-sans">
+    <Header />
+
+    <!-- PROGRESS BAR -->
+    <div id="progress-bar" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-indigo-500 via-fuchsia-500 to-pink-500 z-[60] transition-all duration-100" style="width: 0%"></div>
+
+    <article class="max-w-2xl mx-auto px-8 pt-36 pb-20">
+
+      <!-- META -->
+      <div class="mb-8">
+        <a href="/" class="text-sm text-offset hover:text-secondary transition-colors">← Kembali</a>
+        <div class="flex items-center gap-3 mt-6 mb-4">
+          <span class="text-xs text-secondary uppercase tracking-wide">{post.data.category}</span>
+          {post.data.label && (
+            <span class="text-xs border border-default text-offset px-2 py-0.5 rounded-full">{post.data.label}</span>
+          )}
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-bold mb-4 font-heading">{post.data.title}</h1>
+        {post.data.excerpt && (
+          <p class="text-offset text-lg leading-relaxed font-quote italic">{post.data.excerpt}</p>
+        )}
+        <p class="text-xs text-offset mt-4">
+          {post.data.date.toLocaleDateString("id-ID", { day: "numeric", month: "long", year: "numeric" })}
+        </p>
+      </div>
+
+      <!-- THUMBNAIL -->
+      {post.data.thumbnail && (
+        <img
+          src={post.data.thumbnail}
+          alt={post.data.title}
+          class="w-full rounded-2xl mb-10 aspect-video object-cover"
+        />
+      )}
+
+      <!-- KONTEN -->
+      <div class="prose prose-lg max-w-none
+        prose-headings:font-heading prose-headings:text-default
+        prose-p:text-default prose-p:leading-relaxed
+        prose-a:text-secondary prose-a:no-underline hover:prose-a:underline
+        prose-blockquote:font-quote prose-blockquote:text-offset prose-blockquote:border-secondary
+        prose-strong:text-default
+        prose-img:rounded-2xl">
+        <Content />
+      </div>
+
+      <!-- REACTION -->
+      <div class="mt-16 flex justify-center gap-4">
+        {[
+          { id: "boleh", emoji: "👍", label: "Boleh lah" },
+          { id: "suka", emoji: "❤️", label: "Suka banget" },
+          { id: "hmm", emoji: "🤔", label: "Hmm" },
+        ].map(({ id, emoji, label }) => (
+          <button
+            data-reaction={id}
+            class="reaction-btn flex flex-col items-center gap-1 px-5 py-3 rounded-2xl border border-default hover:border-secondary transition-colors text-sm"
+          >
+            <span class="text-2xl">{emoji}</span>
+            <span class="text-offset text-xs">{label}</span>
+          </button>
+        ))}
+      </div>
+
+      <!-- TRAKTEER -->
+      <div class="mt-8 flex justify-center">
+        
+          href="https://trakteer.id/gametipsy"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-primary px-8 py-3 rounded-full text-sm font-semibold font-ui"
+        >
+          Trakteer Gametipsy
+        </a>
+      </div>
+
+      <!-- BAGIKAN -->
+      <div class="mt-10">
+        <p class="text-sm text-offset mb-3">Bagikan artikel:</p>
+        <div class="flex gap-3">
+          
+            href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.data.title)}&url=${encodeURIComponent(Astro.url.href)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sm border border-default px-4 py-2 rounded-full hover:border-secondary transition-colors"
+          >
+            Twitter/X
+          </a>
+          
+            href={`https://wa.me/?text=${encodeURIComponent(post.data.title + " " + Astro.url.href)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sm border border-default px-4 py-2 rounded-full hover:border-secondary transition-colors"
+          >
+            WhatsApp
+          </a>
+        </div>
+      </div>
+
+    </article>
+
+    <Footer />
+
+    <script>
+      // Progress bar
+      const bar = document.getElementById("progress-bar");
+      document.addEventListener("scroll", () => {
+        const total = document.body.scrollHeight - window.innerHeight;
+        const progress = (window.scrollY / total) * 100;
+        if (bar) bar.style.width = progress + "%";
+      });
+
+      // Reaction button
+      const btns = document.querySelectorAll(".reaction-btn");
+      btns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          btns.forEach((b) => b.classList.remove("border-secondary", "text-secondary"));
+          btn.classList.add("border-secondary", "text-secondary");
+        });
+      });
+    </script>
+  </body>
+</html>
