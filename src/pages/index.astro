@@ -36,12 +36,12 @@ const description = "Buat lo yang udah bosan sama game AAA, di sini lo bakal nem
       });
     </script>
   </head>
-  <body class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white">
+  <body class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white font-sans">
     <Header />
 
     <!-- HERO -->
     <section class="flex min-h-screen flex-col items-center justify-center px-8 text-center pt-24 pb-16">
-      <h1 class="text-6xl sm:text-8xl font-bold mb-6">
+      <h1 class="text-6xl sm:text-8xl font-bold mb-6 font-heading">
         <span class="gradient-text">Game</span>tipsy
       </h1>
       <p class="max-w-xl text-lg sm:text-xl text-offset leading-relaxed mb-10">
@@ -56,7 +56,7 @@ const description = "Buat lo yang udah bosan sama game AAA, di sini lo bakal nem
 
     <!-- FEATURED -->
     <section id="featured" class="px-8 py-20 max-w-6xl mx-auto">
-      <h2 class="text-2xl font-bold mb-10">Artikel Terbaru</h2>
+      <h2 class="text-2xl font-bold mb-10 font-heading">Artikel Terbaru</h2>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
         {[1,2,3].map(() => (
           <div class="group rounded-2xl overflow-hidden border border-default bg-offset">
@@ -80,7 +80,7 @@ const description = "Buat lo yang udah bosan sama game AAA, di sini lo bakal nem
     <!-- TENTANG GAMETIPSY -->
     <section id="tentang" class="px-8 py-20 bg-offset">
       <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-2xl font-bold mb-12">Tentang Gametipsy</h2>
+        <h2 class="text-2xl font-bold mb-12 font-heading">Tentang Gametipsy</h2>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
           {[
             { icon: "🕹️", title: "Game Obscure", desc: "Gametipsy ngumpulin game-game yang jarang dilirik tapi sebenarnya worth it untuk dimainkan." },
@@ -99,7 +99,7 @@ const description = "Buat lo yang udah bosan sama game AAA, di sini lo bakal nem
 
     <!-- KATEGORI -->
     <section id="kategori" class="px-8 py-20 max-w-6xl mx-auto">
-      <h2 class="text-2xl font-bold mb-10">KATEGORI</h2>
+      <h2 class="text-2xl font-bold mb-10 font-heading">KATEGORI</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {[
           { emoji: "🎲", title: "Random Finds", slug: "random-finds", desc: "Game yang ditemukan secara random, dicoba, dan ternyata seru." },
