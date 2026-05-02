@@ -1,0 +1,38 @@
+---
+import Header from "~/components/header.astro";
+import Footer from "~/components/footer.astro";
+import "~/styles/index.css";
+---
+<!doctype html>
+<html lang="id" class="h-full motion-safe:scroll-smooth" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <title>Privacy Policy — Gametipsy</title>
+    <script is:inline>
+      const themeSaved = localStorage.getItem("theme");
+      if (themeSaved) {
+        document.documentElement.dataset.theme = themeSaved;
+      } else {
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
+      }
+    </script>
+  </head>
+  <body class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white font-sans">
+    <Header />
+    <section class="max-w-2xl mx-auto px-8 pt-36 pb-20">
+      <a href="/" class="text-sm text-offset hover:text-secondary transition-colors">← Kembali</a>
+      <h1 class="text-4xl font-bold mt-6 mb-8 font-heading">Privacy Policy</h1>
+      <div class="space-y-5 text-offset leading-relaxed">
+        <p>Gametipsy tidak mengumpulkan data pribadi pengunjung.</p>
+        <p>Website ini tidak menggunakan cookie tracking, tidak ada iklan, dan tidak ada form registrasi.</p>
+        <p>Jika ada pertanyaan soal privacy, hubungi kami lewat halaman Contact.</p>
+      </div>
+    </section>
+    <Footer />
+  </body>
+</html>
