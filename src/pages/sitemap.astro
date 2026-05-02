@@ -5,8 +5,8 @@ import { getCollection } from "astro:content";
 import "~/styles/index.css";
 
 const allPosts = await getCollection("blog");
-const randomFinds = allPosts.filter(p => p.data.category === "Random Finds").sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-const hiddenGems = allPosts.filter(p => p.data.category === "Hidden Gems").sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const randomFinds = allPosts.filter(p => p.data.category === "Random Finds");
+const hiddenGems = allPosts.filter(p => p.data.category === "Hidden Gems");
 ---
 <!doctype html>
 <html lang="id" class="h-full motion-safe:scroll-smooth" data-theme="dark">
@@ -45,48 +45,23 @@ const hiddenGems = allPosts.filter(p => p.data.category === "Hidden Gems").sort(
         </ul>
       </div>
 
-      <!-- Kategori Random Finds -->
+      <!-- Kategori -->
       <div class="mb-12">
-        <h2 class="text-xs uppercase tracking-wide text-offset mb-4">
-          🎲 Random Finds
-          <span class="ml-2 text-secondary">({randomFinds.length})</span>
-        </h2>
-        {randomFinds.length === 0 ? (
-          <p class="text-sm text-offset">Belum ada artikel.</p>
-        ) : (
-          <ul class="space-y-3 text-sm">
-            {randomFinds.map(post => (
-              <li>
-                <a href={`/blog/${post.slug}`} class="hover:text-secondary transition-colors">{post.data.title}</a>
-                <span class="text-offset text-xs ml-2">
-                  {post.data.date.toLocaleDateString("id-ID", { day: "numeric", month: "long", year: "numeric" })}
-                </span>
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
-
-      <!-- Kategori Hidden Gems -->
-      <div class="mb-12">
-        <h2 class="text-xs uppercase tracking-wide text-offset mb-4">
-          💎 Hidden Gems
-          <span class="ml-2 text-secondary">({hiddenGems.length})</span>
-        </h2>
-        {hiddenGems.length === 0 ? (
-          <p class="text-sm text-offset">Belum ada artikel.</p>
-        ) : (
-          <ul class="space-y-3 text-sm">
-            {hiddenGems.map(post => (
-              <li>
-                <a href={`/blog/${post.slug}`} class="hover:text-secondary transition-colors">{post.data.title}</a>
-                <span class="text-offset text-xs ml-2">
-                  {post.data.date.toLocaleDateString("id-ID", { day: "numeric", month: "long", year: "numeric" })}
-                </span>
-              </li>
-            ))}
-          </ul>
-        )}
+        <h2 class="text-xs uppercase tracking-wide text-offset mb-4">Kategori</h2>
+        <ul class="space-y-3 text-sm">
+          <li>
+            <a href="/kategori/random-finds" class="hover:text-secondary transition-colors">
+              🎲 Random Finds
+            </a>
+            <span class="text-offset text-xs ml-2">({randomFinds.length} artikel)</span>
+          </li>
+          <li>
+            <a href="/kategori/hidden-gems" class="hover:text-secondary transition-colors">
+              💎 Hidden Gems
+            </a>
+            <span class="text-offset text-xs ml-2">({hiddenGems.length} artikel)</span>
+          </li>
+        </ul>
       </div>
 
     </section>
