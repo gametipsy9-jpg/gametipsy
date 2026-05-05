@@ -129,22 +129,22 @@ const { Content } = await post.render();
         <div class="flex gap-3">
 
           <!-- Copy Link -->
-          <button data-gt-share="clipboard" data-gt-url={Astro.url.href} data-gt-text={post.data.title} title="Copy Link" class="share-btn w-11 h-11 rounded-xl border border-default flex items-center justify-center text-offset hover:text-secondary hover:border-secondary transition-all duration-200 hover:scale-110">
+          <button data-gt-act="clipboard" data-gt-url={Astro.url.href} data-gt-text={post.data.title} title="Copy Link" class="gt-act-btn w-11 h-11 rounded-xl border border-default flex items-center justify-center text-offset hover:text-secondary hover:border-secondary transition-all duration-200 hover:scale-110">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" color="currentColor" fill="none"><path d="M7.99805 16H11.998M7.99805 11H15.998" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path><path d="M7.5 3.5C5.9442 3.54667 5.01661 3.71984 4.37477 4.36227C3.49609 5.24177 3.49609 6.6573 3.49609 9.48836L3.49609 15.9944C3.49609 18.8255 3.49609 20.241 4.37477 21.1205C5.25345 22 6.66767 22 9.49609 22L14.4961 22C17.3245 22 18.7387 22 19.6174 21.1205C20.4961 20.241 20.4961 18.8255 20.4961 15.9944V9.48836C20.4961 6.6573 20.4961 5.24177 19.6174 4.36228C18.9756 3.71984 18.048 3.54667 16.4922 3.5" stroke="currentColor" stroke-width="1.5"></path><path d="M7.49609 3.75C7.49609 2.7835 8.2796 2 9.24609 2H14.7461C15.7126 2 16.4961 2.7835 16.4961 3.75C16.4961 4.7165 15.7126 5.5 14.7461 5.5H9.24609C8.2796 5.5 7.49609 4.7165 7.49609 3.75Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path></svg>
           </button>
 
           <!-- Twitter/X -->
-          <button data-gt-share="twitter" data-gt-url={Astro.url.href} data-gt-text={post.data.title} title="Bagikan ke X" class="share-btn w-11 h-11 rounded-xl border border-default flex items-center justify-center text-offset hover:text-secondary hover:border-secondary transition-all duration-200 hover:scale-110">
+          <button data-gt-act="twitter" data-gt-url={Astro.url.href} data-gt-text={post.data.title} title="Bagikan ke X" class="gt-act-btn w-11 h-11 rounded-xl border border-default flex items-center justify-center text-offset hover:text-secondary hover:border-secondary transition-all duration-200 hover:scale-110">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" color="currentColor" fill="none"><path d="M2 18.5C3.76504 19.521 5.81428 20 8 20C14.4808 20 19.7617 14.8625 19.9922 8.43797L22 4.5L18.6458 5C17.9407 4.37764 17.0144 4 16 4C13.4276 4 11.5007 6.51734 12.1209 8.98003C8.56784 9.20927 5.34867 7.0213 3.48693 4.10523C2.25147 8.30185 3.39629 13.3561 6.5 16.4705C6.5 17.647 3.5 18.3488 2 18.5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path></svg>
           </button>
 
           <!-- Facebook -->
-          <button data-gt-share="facebook" data-gt-url={Astro.url.href} data-gt-text={post.data.title} title="Bagikan ke Facebook" class="share-btn w-11 h-11 rounded-xl border border-default flex items-center justify-center text-offset hover:text-secondary hover:border-secondary transition-all duration-200 hover:scale-110">
+          <button data-gt-act="facebook" data-gt-url={Astro.url.href} data-gt-text={post.data.title} title="Bagikan ke Facebook" class="gt-act-btn w-11 h-11 rounded-xl border border-default flex items-center justify-center text-offset hover:text-secondary hover:border-secondary transition-all duration-200 hover:scale-110">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" color="currentColor" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.18182 10.3333C5.20406 10.3333 5 10.5252 5 11.4444V13.1111C5 14.0304 5.20406 14.2222 6.18182 14.2222H8.54545V20.8889C8.54545 21.8081 8.74951 22 9.72727 22H12.0909C13.0687 22 13.2727 21.8081 13.2727 20.8889V14.2222H15.9267C16.6683 14.2222 16.8594 14.0867 17.0631 13.4164L17.5696 11.7497C17.9185 10.6014 17.7035 10.3333 16.4332 10.3333H13.2727V7.55556C13.2727 6.94191 13.8018 6.44444 14.4545 6.44444H17.8182C18.7959 6.44444 19 6.25259 19 5.33333V3.11111C19 2.19185 18.7959 2 17.8182 2H14.4545C11.191 2 8.54545 4.48731 8.54545 7.55556V10.3333H6.18182Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path></svg>
           </button>
 
           <!-- WhatsApp -->
-          <button data-gt-share="whatsapp" data-gt-url={Astro.url.href} data-gt-text={post.data.title} title="Bagikan ke WhatsApp" class="share-btn w-11 h-11 rounded-xl border border-default flex items-center justify-center text-offset hover:text-secondary hover:border-secondary transition-all duration-200 hover:scale-110">
+          <button data-gt-act="whatsapp" data-gt-url={Astro.url.href} data-gt-text={post.data.title} title="Bagikan ke WhatsApp" class="gt-act-btn w-11 h-11 rounded-xl border border-default flex items-center justify-center text-offset hover:text-secondary hover:border-secondary transition-all duration-200 hover:scale-110">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" color="currentColor" fill="none"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.3789 2.27907 14.6926 2.78382 15.8877C3.06278 16.5481 3.20226 16.8784 3.21953 17.128C3.2368 17.3776 3.16334 17.6521 3.01642 18.2012L2 22L5.79877 20.9836C6.34788 20.8367 6.62244 20.7632 6.87202 20.7805C7.12161 20.7977 7.45185 20.9372 8.11235 21.2162C9.30745 21.7209 10.6211 22 12 22Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><path d="M8.58815 12.3773L9.45909 11.2956C9.82616 10.8397 10.2799 10.4153 10.3155 9.80826C10.3244 9.65494 10.2166 8.96657 10.0008 7.58986C9.91601 7.04881 9.41086 7 8.97332 7C8.40314 7 8.11805 7 7.83495 7.12931C7.47714 7.29275 7.10979 7.75231 7.02917 8.13733C6.96539 8.44196 7.01279 8.65187 7.10759 9.07169C7.51023 10.8548 8.45481 12.6158 9.91948 14.0805C11.3842 15.5452 13.1452 16.4898 14.9283 16.8924C15.3481 16.9872 15.558 17.0346 15.8627 16.9708C16.2477 16.8902 16.7072 16.5229 16.8707 16.165C17 15.8819 17 15.5969 17 15.0267C17 14.5891 16.9512 14.084 16.4101 13.9992C15.0334 13.7834 14.3451 13.6756 14.1917 13.6845C13.5847 13.7201 13.1603 14.1738 12.7044 14.5409L11.6227 15.4118" stroke="currentColor" stroke-width="1.5"></path></svg>
           </button>
 
@@ -174,14 +174,14 @@ const { Content } = await post.render();
 
     <script is:inline>
       function attachSocialShareEvents() {
-        const shareButtons = document.querySelectorAll("[data-gt-share]");
+        const shareButtons = document.querySelectorAll("[data-gt-act]");
         shareButtons.forEach((elem) => {
           elem.addEventListener("click", handleSocialShare, false);
         });
       }
       function handleSocialShare(event) {
         const elem = event.currentTarget;
-        const network = elem.getAttribute("data-gt-share");
+        const network = elem.getAttribute("data-gt-act");
         const rawUrl = elem.getAttribute("data-gt-url");
         const rawText = elem.getAttribute("data-gt-text");
         if (network === "clipboard") {
