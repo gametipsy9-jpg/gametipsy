@@ -121,7 +121,7 @@ const { Content } = await post.render();
       <!-- TRAKTEER -->
       <div class="mt-8 flex justify-center">
         
-          href="https://trakteer.id/gametipsy"
+        <a href="https://trakteer.id/gametipsy"
           target="_blank"
           rel="noopener noreferrer"
           class="btn-primary px-8 py-3 rounded-full text-sm font-semibold font-ui"
@@ -135,7 +135,7 @@ const { Content } = await post.render();
         <p class="text-sm text-offset mb-3">Bagikan artikel:</p>
         <div class="flex gap-3">
           
-            href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.data.title)}&url=${encodeURIComponent(Astro.url.href)}`}
+          <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.data.title)}&url=${encodeURIComponent(Astro.url.href)}`}
             target="_blank"
             rel="noopener noreferrer"
             class="text-sm border border-default px-4 py-2 rounded-full hover:border-secondary transition-colors"
