@@ -137,9 +137,9 @@ const { Content } = await post.render();
 
           <!-- Copy Link -->
           <button
-            data-aw-social-share="clipboard"
-            data-aw-url={Astro.url.href}
-            data-aw-text={post.data.title}
+            data-gt-share="clipboard"
+            data-gt-url={Astro.url.href}
+            data-gt-text={post.data.title}
             title="Copy Link"
             class="share-btn w-11 h-11 rounded-xl border border-default flex items-center justify-center text-offset hover:text-secondary hover:border-secondary transition-all duration-200 hover:scale-110"
           >
@@ -148,9 +148,9 @@ const { Content } = await post.render();
 
           <!-- Twitter/X -->
           <button
-            data-aw-social-share="twitter"
-            data-aw-url={Astro.url.href}
-            data-aw-text={post.data.title}
+            data-gt-share="twitter"
+            data-gt-url={Astro.url.href}
+            data-gt-text={post.data.title}
             title="Bagikan ke X"
             class="share-btn w-11 h-11 rounded-xl border border-default flex items-center justify-center text-offset hover:text-secondary hover:border-secondary transition-all duration-200 hover:scale-110"
           >
@@ -159,9 +159,9 @@ const { Content } = await post.render();
 
           <!-- Facebook -->
           <button
-            data-aw-social-share="facebook"
-            data-aw-url={Astro.url.href}
-            data-aw-text={post.data.title}
+            data-gt-share="facebook"
+            data-gt-url={Astro.url.href}
+            data-gt-text={post.data.title}
             title="Bagikan ke Facebook"
             class="share-btn w-11 h-11 rounded-xl border border-default flex items-center justify-center text-offset hover:text-secondary hover:border-secondary transition-all duration-200 hover:scale-110"
           >
@@ -170,9 +170,9 @@ const { Content } = await post.render();
 
           <!-- WhatsApp -->
           <button
-            data-aw-social-share="whatsapp"
-            data-aw-url={Astro.url.href}
-            data-aw-text={post.data.title}
+            data-gt-share="whatsapp"
+            data-gt-url={Astro.url.href}
+            data-gt-text={post.data.title}
             title="Bagikan ke WhatsApp"
             class="share-btn w-11 h-11 rounded-xl border border-default flex items-center justify-center text-offset hover:text-secondary hover:border-secondary transition-all duration-200 hover:scale-110"
           >
@@ -207,16 +207,16 @@ const { Content } = await post.render();
 
     <script is:inline>
       function attachSocialShareEvents() {
-        const shareButtons = document.querySelectorAll("[data-aw-social-share]");
+        const shareButtons = document.querySelectorAll("[data-gt-share]");
         shareButtons.forEach((elem) => {
           elem.addEventListener("click", handleSocialShare, false);
         });
       }
       function handleSocialShare(event) {
         const elem = event.currentTarget;
-        const network = elem.getAttribute("data-aw-social-share");
-        const rawUrl = elem.getAttribute("data-aw-url");
-        const rawText = elem.getAttribute("data-aw-text");
+        const network = elem.getAttribute("data-gt-share");
+        const rawUrl = elem.getAttribute("data-gt-url");
+        const rawText = elem.getAttribute("data-gt-text");
         if (network === "clipboard") {
           copyToClipboard(rawUrl);
           return;
