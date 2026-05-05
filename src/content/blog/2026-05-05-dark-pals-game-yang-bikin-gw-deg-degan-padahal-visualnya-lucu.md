@@ -14,7 +14,7 @@ weirdness_nagih: 7.5
 ---
 Gw tipe orang yang kalau lihat kategori game horror langsung skip. Gw males kalau jantung dibikin deg-degan. Tapi Dark Pals masuk feed gw.
 
-Yang pertama gw tangkep dari game Dark Pals adalah, ini karakternya kocak banget. Anjing yang kepalanya kegedan, bayi yang bentukannya aneh, ditambah dengan warna-warna yang cerah.
+Yang pertama gw tangkep dari game Dark Pals adalah, ini karakternya kocak banget. Anjing yang kepalanya kegedan, bayi yang bentukannya aneh, dan lainnya.
 
 Gw pikir ini game paling kayak platformer absurd yang kebetulan ada vibes horornya dikit. Ternyata gw salah. Begitu masuk ke dalam asylum-nya, suasananya langsung beda.
 
