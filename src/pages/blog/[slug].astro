@@ -65,6 +65,31 @@ const { Content } = await post.render();
         />
       )}
 
+<!-- WEIRDNESS SCALE -->
+      {(post.data.weirdness_visual || post.data.weirdness_animasi || post.data.weirdness_audio || post.data.weirdness_desain || post.data.weirdness_nagih) && (
+        <div class="mb-10 border border-default rounded-2xl p-6">
+          <p class="text-xs uppercase tracking-widest text-offset mb-5">Weirdness Scale</p>
+          {[
+            { label: "Absurditas Visual", value: post.data.weirdness_visual },
+            { label: "Kualitas Animasi", value: post.data.weirdness_animasi },
+            { label: "Audio", value: post.data.weirdness_audio },
+            { label: "Keputusan Desain Aneh", value: post.data.weirdness_desain },
+            { label: "Bikin Penasaran Lanjutan", value: post.data.weirdness_nagih },
+          ].filter(item => item.value !== undefined).map(({ label, value }) => (
+            <div class="flex items-center gap-4 mb-3">
+              <span class="text-sm text-offset w-48 shrink-0">{label}</span>
+              <div class="flex-1 h-1.5 bg-default rounded-full overflow-hidden">
+                <div
+                  class="h-1.5 rounded-full bg-gradient-to-r from-indigo-500 via-fuchsia-500 to-pink-500"
+                  style={`width: ${(value / 10) * 100}%`}
+                />
+              </div>
+              <span class="text-sm text-offset w-6 text-right">{value}</span>
+            </div>
+          ))}
+        </div>
+      )}
+
       <!-- KONTEN -->
       <div class="prose prose-lg max-w-none
         prose-headings:font-heading prose-headings:text-default
