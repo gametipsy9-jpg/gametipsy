@@ -20,12 +20,7 @@ Gw pikir ini game paling kayak platformer absurd yang kebetulan ada vibes hororn
 
 Audionya yang pertama kerasa, musiknya bikin suasana jadi serem, creepy, tapi ada nada-nada komikal yang bikin lo bingung harus takut atau ketawa-ketiwi. Itu kombinasi yang gw ga nyangka bakal seefektif ini.
 
-<div id="yt-facade" style="position:relative;width:100%;aspect-ratio:16/9;cursor:pointer;border-radius:16px;overflow:hidden;background:#000;" onclick="this.innerHTML='<iframe width=100% height=100% src=https://www.youtube.com/embed/qjiFaDCquUI?autoplay=1&si=rQCTmdVMO5-WnTCQ style=position:absolute;top:0;left:0;border:0 allow=accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture allowfullscreen></iframe>'">
-  <img src="https://i.ytimg.com/vi/qjiFaDCquUI/maxresdefault.jpg" style="width:100%;height:100%;object-fit:cover;" alt="Dark Pals Trailer" />
-  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:68px;height:48px;background:#ff0000;border-radius:12px;display:flex;align-items:center;justify-content:center;">
-    <svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M8 5v14l11-7z"/></svg>
-  </div>
-</div>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/qjiFaDCquUI?si=rQCTmdVMO5-WnTCQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Animasinya bukan kaleng-kaleng
 
