@@ -49,7 +49,7 @@ const { Content } = await post.render();
         </div>
         <h1 class="text-3xl sm:text-4xl font-bold mb-4 font-heading">{post.data.title}</h1>
         {post.data.excerpt && (
-          <p class="text-offset text-lg leading-relaxed font-quote italic">{post.data.excerpt}</p>
+          <p class="text-default text-lg leading-relaxed font-quote italic">{post.data.excerpt}</p>
         )}
         <p class="text-xs text-offset mt-4">
           {post.data.date.toLocaleDateString("id-ID", { day: "numeric", month: "long", year: "numeric" })}
