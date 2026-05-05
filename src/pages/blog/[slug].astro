@@ -74,7 +74,7 @@ const { Content } = await post.render();
             { label: "Kualitas Animasi", value: post.data.weirdness_animasi },
             { label: "Audio", value: post.data.weirdness_audio },
             { label: "Keputusan Desain Aneh", value: post.data.weirdness_desain },
-            { label: "Bikin Penasaran Lanjutan", value: post.data.weirdness_nagih },
+            { label: "Bikin Penasaran", value: post.data.weirdness_nagih },
           ].filter(item => item.value !== undefined).map(({ label, value }) => (
             <div class="flex items-center gap-4 mb-3">
               <span class="text-sm text-offset w-48 shrink-0">{label}</span>
