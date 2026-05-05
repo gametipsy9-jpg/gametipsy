@@ -21,7 +21,7 @@ Gw pikir ini game paling kayak platformer absurd yang kebetulan ada vibes hororn
 Audionya yang pertama kerasa, musiknya bikin suasana jadi serem, creepy, tapi ada nada-nada komikal yang bikin lo bingung harus takut atau ketawa-ketiwi. Itu kombinasi yang gw ga nyangka bakal seefektif ini.
 
 ```
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/qjiFaDCquUI?si=rQCTmdVMO5-WnTCQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qjiFaDCquUI?si=3ZAfPCWsH0VnOZlj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ```
 
 ## Animasinya bukan kaleng-kaleng
