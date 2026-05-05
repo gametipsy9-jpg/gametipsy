@@ -197,14 +197,22 @@ const { Content } = await post.render();
         }
       }
       function copyToClipboard(text) {
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(text).catch(() => {
-            fallbackCopyTextToClipboard(text);
-          });
-        } else {
-          fallbackCopyTextToClipboard(text);
-        }
-      }
+  const btn = document.querySelector("[data-gt-act='clipboard']");
+  function showCopied() {
+    if (!btn) return;
+    btn.classList.add("border-secondary", "text-secondary");
+    setTimeout(() => btn.classList.remove("border-secondary", "text-secondary"), 2000);
+  }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(showCopied).catch(() => {
+      fallbackCopyTextToClipboard(text);
+      showCopied();
+    });
+  } else {
+    fallbackCopyTextToClipboard(text);
+    showCopied();
+  }
+}
       function openSocialShare(network, rawUrl, rawText) {
         const url = encodeURIComponent(rawUrl);
         const text = encodeURIComponent(rawText);
