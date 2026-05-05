@@ -1,5 +1,5 @@
 ---
-title: "Dark Pals: Game Yang Bikin Ww Deg-Degan Padahal Visualnya Lucu"
+title: "Dark Pals: Game Yang Bikin Gw Deg-Degan Padahal Visualnya Lucu"
 date: 2026-05-05
 category: Random Finds
 label: Worth Trying
