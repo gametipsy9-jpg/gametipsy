@@ -77,7 +77,7 @@ const { Content } = await post.render();
             { label: "Bikin Penasaran", value: post.data.weirdness_nagih },
           ].filter(item => item.value !== undefined).map(({ label, value }) => (
             <div class="flex items-center gap-4 mb-3">
-              <span class="text-sm text-offset w-48 shrink-0">{label}</span>
+              <span class="text-sm text-offset w-28 sm:w-48 shrink-0">{label}</span>
               <div class="flex-1 h-1.5 bg-default rounded-full overflow-hidden">
                 <div
                   class="h-1.5 rounded-full bg-gradient-to-r from-indigo-500 via-fuchsia-500 to-pink-500"
