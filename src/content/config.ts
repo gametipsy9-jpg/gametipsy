@@ -1,5 +1,4 @@
 import { defineCollection, z } from "astro:content";
-
 const blog = defineCollection({
   type: "content",
   schema: z.object({
@@ -9,9 +8,13 @@ const blog = defineCollection({
     label: z.enum(["Worth Trying", "Recommended"]).optional(),
     thumbnail: z.string().optional(),
     excerpt: z.string().optional(),
+    weirdness_visual: z.number().optional(),
+    weirdness_animasi: z.number().optional(),
+    weirdness_audio: z.number().optional(),
+    weirdness_desain: z.number().optional(),
+    weirdness_nagih: z.number().optional(),
   }),
 });
-
 export const collections = {
   blog,
 };
