@@ -50,3 +50,11 @@ Lo bisa download game ini melalui steam.
 <iframe src="https://store.steampowered.com/widget/4157130/" frameborder="0" width="100%" height="190"></iframe>
 ```
 
+## Spesifikasi Minimum
+
+- **OS:** Windows 10
+- **Processor:** AMD Ryzen 5 1400
+- **Memory:** 8 GB RAM
+- **Graphics:** Nvidia GeForce GTX 960M
+- **Storage:** 5 GB available space
+
