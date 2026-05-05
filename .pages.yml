@@ -33,6 +33,21 @@ content:
       - name: excerpt
         label: Kalimat Pemancing
         type: string
+      - name: weirdness_visual
+        label: "Weirdness Scale: Absurditas Visual (1-10)"
+        type: number
+      - name: weirdness_animasi
+        label: "Weirdness Scale: Kualitas Animasi (1-10)"
+        type: number
+      - name: weirdness_audio
+        label: "Weirdness Scale: Audio (1-10)"
+        type: number
+      - name: weirdness_desain
+        label: "Weirdness Scale: Keputusan Desain Aneh (1-10)"
+        type: number
+      - name: weirdness_nagih
+        label: "Weirdness Scale: Bikin Penasaran (1-10)"
+        type: number
       - name: body
         label: Konten
         type: rich-text
