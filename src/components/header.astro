@@ -1,6 +1,15 @@
 ---
 import ThemeSwitcher from "~/components/theme-switcher.astro";
 import { Icon } from "astro-icon/components";
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection("blog");
+const searchData = allPosts.map((post) => ({
+  title: post.data.title,
+  excerpt: post.data.excerpt ?? "",
+  category: post.data.category ?? "",
+  slug: post.slug,
+}));
 ---
 <header
   id="page-header"
@@ -44,6 +53,8 @@ import { Icon } from "astro-icon/components";
         <Icon name="mdi:close" class="size-5" />
       </button>
     </div>
+    <!-- Search results dropdown -->
+    <div id="search-results" class="hidden max-w-2xl mx-auto mt-2 pb-2"></div>
   </div>
 
   <!-- Mobile menu -->
@@ -67,15 +78,16 @@ import { Icon } from "astro-icon/components";
   </div>
 </header>
 
-<script>
-  const header = document.querySelector("#page-header") as HTMLElement;
-  const menuModal = document.querySelector("#menu-modal") as HTMLElement;
+<script define:vars={{ searchData }}>
+  const header = document.querySelector("#page-header");
+  const menuModal = document.querySelector("#menu-modal");
   const openBtn = document.querySelector("#open-nav-button");
   const closeBtn = document.querySelector("#close-nav-button");
   const searchToggle = document.querySelector("#search-toggle");
   const searchClose = document.querySelector("#search-close");
-  const searchBar = document.querySelector("#search-bar") as HTMLElement;
-  const searchInput = document.querySelector("#search-input") as HTMLInputElement;
+  const searchBar = document.querySelector("#search-bar");
+  const searchInput = document.querySelector("#search-input");
+  const searchResults = document.querySelector("#search-results");
 
   openBtn?.addEventListener("click", () => {
     menuModal.classList.remove("hidden");
@@ -98,15 +110,45 @@ import { Icon } from "astro-icon/components";
       searchInput.focus();
     }
   });
-  searchClose?.addEventListener("click", () => {
+
+  function closeSearch() {
     searchBar.classList.add("hidden");
     searchInput.value = "";
-  });
+    searchResults.classList.add("hidden");
+    searchResults.innerHTML = "";
+  }
+
+  searchClose?.addEventListener("click", closeSearch);
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      searchBar.classList.add("hidden");
-      searchInput.value = "";
+    if (e.key === "Escape") closeSearch();
+  });
+
+  searchInput?.addEventListener("input", () => {
+    const query = searchInput.value.trim().toLowerCase();
+    if (query.length < 2) {
+      searchResults.classList.add("hidden");
+      searchResults.innerHTML = "";
+      return;
     }
+
+    const matches = searchData.filter((post) =>
+      post.title.toLowerCase().includes(query) ||
+      post.excerpt.toLowerCase().includes(query) ||
+      post.category.toLowerCase().includes(query)
+    );
+
+    if (matches.length === 0) {
+      searchResults.innerHTML = `<p class="text-sm text-offset py-2">Tidak ada hasil untuk "<strong>${query}</strong>"</p>`;
+    } else {
+      searchResults.innerHTML = matches.map((post) => `
+        <a href="/blog/${post.slug}" class="flex flex-col py-3 border-t border-default hover:text-secondary transition-colors">
+          <span class="text-xs text-secondary uppercase tracking-wide mb-1">${post.category}</span>
+          <span class="text-sm font-semibold">${post.title}</span>
+          ${post.excerpt ? `<span class="text-xs text-offset mt-0.5 line-clamp-1">${post.excerpt}</span>` : ""}
+        </a>
+      `).join("");
+    }
+    searchResults.classList.remove("hidden");
   });
 
   document.addEventListener("scroll", () => {
