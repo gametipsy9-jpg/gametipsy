@@ -25,6 +25,20 @@ const { Content } = await post.render();
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
     <title>{post.data.title} — Gametipsy</title>
     <meta name="description" content={post.data.excerpt ?? post.data.title} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Gametipsy" />
+    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:title" content={post.data.title} />
+    <meta property="og:description" content={post.data.excerpt ?? post.data.title} />
+    {post.data.thumbnail && <meta property="og:image" content={new URL(post.data.thumbnail, Astro.url).href} />}
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={post.data.title} />
+    <meta name="twitter:description" content={post.data.excerpt ?? post.data.title} />
+    {post.data.thumbnail && <meta name="twitter:image" content={new URL(post.data.thumbnail, Astro.url).href} />}
     <script is:inline>
       const themeSaved = localStorage.getItem("theme");
       document.documentElement.dataset.theme = themeSaved ?? "dark";
