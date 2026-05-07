@@ -102,20 +102,24 @@ const { Content } = await post.render();
       </div>
 
       <!-- REACTION -->
-      <div class="mt-16 flex justify-center gap-4">
-        {[
-          { id: "boleh", emoji: "👍", label: "Boleh lah" },
-          { id: "suka", emoji: "❤️", label: "Suka banget" },
-          { id: "hmm", emoji: "🤔", label: "Hmm" },
-        ].map(({ id, emoji, label }) => (
-          <button
-            data-reaction={id}
-            class="reaction-btn flex flex-col items-center gap-1 px-5 py-3 rounded-2xl border border-default hover:border-secondary transition-colors text-sm"
-          >
-            <span class="text-2xl">{emoji}</span>
-            <span class="text-offset text-xs">{label}</span>
-          </button>
-        ))}
+      <div class="mt-16">
+        <p class="text-center text-sm text-offset mb-4">Gimana artikelnya?</p>
+        <div class="flex justify-center gap-4">
+          {[
+            { id: "boleh", emoji: "👍", label: "Boleh lah" },
+            { id: "suka", emoji: "❤️", label: "Suka banget" },
+            { id: "hmm", emoji: "🤔", label: "Hmm" },
+          ].map(({ id, emoji, label }) => (
+            <button
+              data-reaction={id}
+              class="reaction-btn flex flex-col items-center gap-1 px-5 py-3 rounded-2xl border border-default hover:border-secondary transition-colors text-sm"
+            >
+              <span class="text-2xl">{emoji}</span>
+              <span class="text-offset text-xs">{label}</span>
+              <span class="reaction-count text-xs text-secondary font-semibold">0</span>
+            </button>
+          ))}
+        </div>
       </div>
 
       <!-- TRAKTEER -->
@@ -163,13 +167,57 @@ const { Content } = await post.render();
         if (bar) bar.style.width = progress + "%";
       });
 
+      const SUPABASE_URL = "https://gkfxtbmxeqtgrjvyrbrd.supabase.co";
+      const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdrZnh0Ym14ZXF0Z3JqdnlyYnJkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgxNTY2MjIsImV4cCI6MjA5MzczMjYyMn0.H0r_T7KccD9UE583HPk6b7jhfrVf4-NFQ14RyhmUgJI";
+      const slug = window.location.pathname.replace(/\//g, "-").replace(/^-|-$/g, "");
+
+      async function loadCounts() {
+        const res = await fetch(`${SUPABASE_URL}/rest/v1/reactions?slug=eq.${slug}&select=reaction`, {
+          headers: { apikey: SUPABASE_KEY, Authorization: `Bearer ${SUPABASE_KEY}` }
+        });
+        const data = await res.json();
+        const counts = { boleh: 0, suka: 0, hmm: 0 };
+        data.forEach((r) => { if (counts[r.reaction] !== undefined) counts[r.reaction]++; });
+        document.querySelectorAll(".reaction-btn").forEach((btn) => {
+          const id = btn.getAttribute("data-reaction");
+          const countEl = btn.querySelector(".reaction-count");
+          if (countEl) countEl.textContent = counts[id] || 0;
+        });
+      }
+
       const btns = document.querySelectorAll(".reaction-btn");
+      const storageKey = `reaction-${slug}`;
+      const saved = localStorage.getItem(storageKey);
+
+      if (saved) {
+        btns.forEach((btn) => {
+          if (btn.getAttribute("data-reaction") === saved) {
+            btn.classList.add("border-secondary", "text-secondary");
+          }
+        });
+      }
+
       btns.forEach((btn) => {
-        btn.addEventListener("click", () => {
+        btn.addEventListener("click", async () => {
+          if (localStorage.getItem(storageKey)) return;
+          const reaction = btn.getAttribute("data-reaction");
+          localStorage.setItem(storageKey, reaction);
           btns.forEach((b) => b.classList.remove("border-secondary", "text-secondary"));
           btn.classList.add("border-secondary", "text-secondary");
+          await fetch(`${SUPABASE_URL}/rest/v1/reactions`, {
+            method: "POST",
+            headers: {
+              apikey: SUPABASE_KEY,
+              Authorization: `Bearer ${SUPABASE_KEY}`,
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ slug, reaction }),
+          });
+          loadCounts();
         });
       });
+
+      loadCounts();
     </script>
 
     <script is:inline>
