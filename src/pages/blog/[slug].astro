@@ -32,13 +32,13 @@ const { Content } = await post.render();
     <meta property="og:url" content={Astro.url.href} />
     <meta property="og:title" content={post.data.title} />
     <meta property="og:description" content={post.data.excerpt ?? post.data.title} />
-    {post.data.thumbnail && <meta property="og:image" content={new URL(post.data.thumbnail, Astro.url).href} />}
+    {post.data.thumbnail && <meta property="og:image" content={`https://gametipsy.com/${post.data.thumbnail.replace(/^\//, "")}`} />}
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={post.data.title} />
     <meta name="twitter:description" content={post.data.excerpt ?? post.data.title} />
-    {post.data.thumbnail && <meta name="twitter:image" content={new URL(post.data.thumbnail, Astro.url).href} />}
+    {post.data.thumbnail && <meta name="twitter:image" content={`https://gametipsy.com/${post.data.thumbnail.replace(/^\//, "")}`} />}
     <script is:inline>
       const themeSaved = localStorage.getItem("theme");
       document.documentElement.dataset.theme = themeSaved ?? "dark";
