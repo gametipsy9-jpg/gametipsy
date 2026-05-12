@@ -138,7 +138,7 @@ const { Content } = await post.render();
 
       <!-- TRAKTEER -->
       <div class="mt-8 flex justify-center">
-        <a href="https://trakteer.id/gametipsy" target="_blank" rel="noopener noreferrer" class="btn-primary px-8 py-3 rounded-full text-sm font-semibold font-ui">Trakteer Gametipsy</a>
+        <a href="https://trakteer.id/gametipsy" target="_blank" rel="noopener noreferrer" onclick="if(typeof gtag!=='undefined'){gtag('event','trakteer_click',{content_type:'article'})}" class="btn-primary px-8 py-3 rounded-full text-sm font-semibold font-ui">Trakteer Gametipsy</a>
       </div>
 
       <!-- BAGIKAN -->
@@ -247,8 +247,14 @@ const { Content } = await post.render();
         const rawUrl = elem.getAttribute("data-gt-url");
         const rawText = elem.getAttribute("data-gt-text");
         if (network === "clipboard") {
+          if (typeof gtag !== "undefined") {
+            gtag("event", "share_click", { method: "copy_link", content_type: "article", item_id: rawUrl });
+          }
           copyToClipboard(rawUrl);
           return;
+        }
+        if (typeof gtag !== "undefined") {
+          gtag("event", "share_click", { method: network, content_type: "article", item_id: rawUrl });
         }
         if (navigator.share && /Mobi|Android/i.test(navigator.userAgent)) {
           navigator.share({ title: rawText, text: rawText, url: rawUrl }).catch(() => {
