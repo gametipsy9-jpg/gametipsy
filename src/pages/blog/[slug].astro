@@ -138,7 +138,7 @@ const { Content } = await post.render();
 
       <!-- TRAKTEER -->
       <div class="mt-8 flex justify-center">
-        <a href="https://trakteer.id/gametipsy" target="_blank" rel="noopener noreferrer" onclick="if(typeof gtag!=='undefined'){gtag('event','trakteer_click',{content_type:'article'})}" class="btn-primary px-8 py-3 rounded-full text-sm font-semibold font-ui">Trakteer Gametipsy</a>
+        <a id="trakteer-btn" href="https://trakteer.id/gametipsy" target="_blank" rel="noopener noreferrer" class="btn-primary px-8 py-3 rounded-full text-sm font-semibold font-ui">Trakteer Gametipsy</a>
       </div>
 
       <!-- BAGIKAN -->
@@ -232,6 +232,15 @@ const { Content } = await post.render();
       });
 
       loadCounts();
+
+      const trakteerBtn = document.getElementById("trakteer-btn");
+      if (trakteerBtn) {
+        trakteerBtn.addEventListener("click", () => {
+          if (typeof gtag !== "undefined") {
+            gtag("event", "trakteer_click", { content_type: "article" });
+          }
+        });
+      }
     </script>
 
     <script is:inline>
