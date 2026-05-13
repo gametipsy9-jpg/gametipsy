@@ -232,15 +232,6 @@ const { Content } = await post.render();
       });
 
       loadCounts();
-
-      const trakteerBtn = document.getElementById("trakteer-btn");
-      if (trakteerBtn) {
-        trakteerBtn.addEventListener("click", () => {
-          if (typeof gtag !== "undefined") {
-            gtag("event", "trakteer_click", { content_type: "article" });
-          }
-        });
-      }
     </script>
 
     <script is:inline>
@@ -345,6 +336,15 @@ const { Content } = await post.render();
     }, { rootMargin: '200px' });
     observer.observe(iframe);
   });
+
+  var trakteerBtn = document.getElementById("trakteer-btn");
+  if (trakteerBtn) {
+    trakteerBtn.addEventListener("click", function() {
+      if (typeof gtag !== "undefined") {
+        gtag("event", "trakteer_click", { content_type: "article" });
+      }
+    });
+  }
 </script>
   </body>
 </html>
