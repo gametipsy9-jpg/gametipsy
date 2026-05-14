@@ -1,0 +1,32 @@
+# Gametipsy
+
+> Game aneh, tapi bikin nagih. Rekomendasi game obscure dan hidden gems buat lo yang lagi bosan sama game AAA.
+
+Gametipsy adalah blog gaming berbahasa Indonesia yang fokus merekomendasikan game-game obscure, aneh, dan underrated yang jarang dilirik tapi surprisingly worth it. Seperti nerd gamer yang selalu tahu game random yang ternyata seru.
+
+## Kategori Konten
+
+- **Random Finds**: Game-game random yang ditemukan secara tidak sengaja tapi ternyata nagih
+- **Hidden Gems**: Game berkualitas tinggi yang kurang mendapat perhatian dari komunitas gaming mainstream
+
+## Target Pembaca
+
+Gamer Indonesia yang sedang bosan dengan game AAA mainstream dan ingin menemukan pengalaman gaming baru yang unik dan berbeda.
+
+## Format Artikel
+
+Setiap artikel di Gametipsy berisi:
+- Deskripsi game dan kenapa game ini layak dicoba
+- Weirdness Scale: rating visual, animasi, audio, keputusan desain, dan faktor nagih
+- Steam widget untuk langsung lihat game di Steam
+- Reaksi pembaca (Boleh lah / Suka banget / Nani?)
+
+## Link Penting
+
+- Website: https://gametipsy.com
+- Semua artikel: https://gametipsy.com/artikel
+- Kategori Random Finds: https://gametipsy.com/kategori/random-finds
+- Kategori Hidden Gems: https://gametipsy.com/kategori/hidden-gems
+- RSS Feed: https://gametipsy.com/rss.xml
+- X (Twitter): https://x.com/gametipsycom
+- Trakteer: https://trakteer.id/gametipsy
