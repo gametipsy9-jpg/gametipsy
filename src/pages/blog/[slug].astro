@@ -25,6 +25,7 @@ const { Content } = await post.render();
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
     <title>{post.data.title} — Gametipsy</title>
     <meta name="description" content={post.data.excerpt ?? post.data.title} />
+    <link rel="canonical" href={`https://gametipsy.com/blog/${post.slug}`} />
 
     <!-- Open Graph -->
     <meta property="og:type" content="article" />
