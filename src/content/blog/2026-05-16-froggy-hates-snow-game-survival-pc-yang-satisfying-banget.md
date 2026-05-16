@@ -7,11 +7,11 @@ thumbnail: /images/uploads/froggy-hates-snow.webp
 excerpt: Jujur, waktu pertama kali liat nama game ini, gw ketawa. Froggy Hates
   Snow. Kodok benci salju. Itu doang premisnya. Sempat ragu juga ini game asal
   jadi atau gimana, tapi ternyata game ini bikin gw lupa waktu.
-weirdness_visual: 7.5
-weirdness_animasi: 8.5
-weirdness_audio: 7
-weirdness_desain: 8
-weirdness_nagih: 8
+weirdness_visual: 8
+weirdness_animasi: 8
+weirdness_audio: 7.5
+weirdness_desain: 8.5
+weirdness_nagih: 8.5
 ---
 ## Kodok di Tengah Badai Salju, Masuk Akal? Nggak. Seru? Banget.
 
