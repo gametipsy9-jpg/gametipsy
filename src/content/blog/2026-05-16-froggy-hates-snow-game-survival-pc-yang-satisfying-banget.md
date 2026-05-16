@@ -81,6 +81,10 @@ Dan desain monsternya walaupun ada beberapa yang keren, secara keseluruhan meman
 
 ## Di Mana Gw Bisa Mainin Game Ini?
 
+<div style="position: relative; padding-bottom: 29.4%; height: 0; overflow: hidden;">
+  <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://store.steampowered.com/widget/3232380/" frameborder="0"></iframe>
+</div>
+
 ## Spesifikasi Minimum
 
 - Requires a 64-bit processor & operating system
