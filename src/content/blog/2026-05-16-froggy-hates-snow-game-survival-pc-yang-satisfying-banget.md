@@ -17,7 +17,7 @@ weirdness_nagih: 8.5
 
 Froggy Hates Snow adalah game survival roguelike di mana lo main sebagai seekor kodok yang terjebak di padang salju.
 
-Tujuannya sederhana: bertahan hidup, gali jalan, kumpulin resources, dan kabur. Entah itu kabur dengan nemuin pintu keluar yang tersembunyi, atau ngalahin semua "waves" monster sampai bos terakhir.
+Tujuannya sederhana yaitu, bertahan hidup, gali jalan, kumpulin resources, dan kabur. Entah itu kabur dengan nemuin pintu keluar yang tersembunyi, atau ngalahin semua "waves" monster sampai bos terakhir.
 
 Konsepnya memang absurd. Kodok, salju, monster-monster yang bentukannya aneh, kayak nggak nyambung satu sama lain.
 
