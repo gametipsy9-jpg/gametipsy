@@ -23,6 +23,10 @@ Konsepnya memang absurd. Kodok, salju, monster-monster yang bentukannya aneh, ka
 
 Dan gw akui, gw sendiri nggak terlalu ngerti lore-nya apa. Tapi somehow, justru keanehan itu yang bikin game ini punya karakter sendiri.
 
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/XDW54Bj1Tsk?si=CTONfwY8WB6kxKim" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 ## Dua Mode Main, Dua Vibe yang Beda
 
 Ada dua mode di game ini:
@@ -76,8 +80,6 @@ Satu hal yang perlu gw akui yaitu, konsep karakter utamanya tetap aneh buat gw. 
 Dan desain monsternya walaupun ada beberapa yang keren, secara keseluruhan memang abstrak dan susah dicerna. Tapi mungkin itu juga bagian dari charm-nya.
 
 ## Di Mana Gw Bisa Mainin Game Ini?
-
-
 
 ## Spesifikasi Minimum
 
