@@ -24,7 +24,9 @@ Yang bikin unik, lo bisa langsung ngerasain sendiri dari lingkungan sekitar. Lo 
 
 Bukan lewat teks atau cutscene. Efeknya justru lebih dapet, karena lo ngerasa beneran lagi ada di sana, bukan cuma nonton cutscene yang kadang malah bikin boring.
 
-
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/LY7FxeZRMq0" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ## Grafisnya Hampir Realistis
 
@@ -74,13 +76,17 @@ Yang bikin lebih optimis itu developer-nya aktif baca feedback di Steam dan Disc
 
 ## Dimana Gw Bisa Mainin Game ini?
 
+<div style="width: 100%; overflow: hidden;">
+  <iframe style="width: 100%; height: 190px;" src="https://store.steampowered.com/widget/2599690/" frameborder="0"></iframe>
+</div>
+
 ## System Requirements
 
 **Minimum:**
 
 - **OS:** Windows 10 64-bit
-- **Processor:** Intel Core i5-9400 / AMD Ryzen 5 2600
+- **Processor:** Intel Core i5-9400/AMD Ryzen 5 2600
 - **Memory:** 16 GB RAM
-- **Graphics:** NVIDIA GeForce GTX 1660 Ti (6 GB) / AMD Radeon RX 590 (8 GB)
+- **Graphics:** NVIDIA GeForce GTX 1660 Ti (6 GB)/AMD Radeon RX 590 (8 GB)
 - **Storage:** 15 GB available space
 
