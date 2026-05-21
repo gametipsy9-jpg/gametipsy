@@ -4,7 +4,7 @@ import Footer from "~/components/footer.astro";
 import { getCollection } from "astro:content";
 import "~/styles/index.css";
 const { generator, site } = Astro;
-const description = "Buat lo yang udah bosan sama game AAA, di sini lo bakal nemuin game random yang jarang dilirik tapi surprisingly worth it.";
+const description = "Buat lo yang udah bosan sama game yang itu-itu aja, di sini lo bakal nemuin game random yang jarang dilirik tapi surprisingly worth it.";
 const allPosts = await getCollection("blog");
 const latestPosts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()).slice(0, 3);
 ---
@@ -38,7 +38,7 @@ const latestPosts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.
         <span class="gradient-text">Game</span>tipsy
       </h1>
       <p class="max-w-xl text-lg sm:text-xl text-offset leading-relaxed mb-10">
-        Buat lo yang udah <span class="gradient-text font-semibold">bosan sama game AAA</span>, di sini lo bakal nemuin <span class="gradient-text font-semibold">game random yang jarang dilirik</span> tapi surprisingly worth it.
+        Buat lo yang udah <span class="gradient-text font-semibold">bosan sama game yang itu-itu aja</span>, di sini lo bakal nemuin <span class="gradient-text font-semibold">game random yang jarang dilirik</span> tapi surprisingly worth it.
       </p>
       <div class="flex justify-center">
         <a href="#featured" class="btn-primary px-8 py-3 rounded-full text-sm font-semibold">
