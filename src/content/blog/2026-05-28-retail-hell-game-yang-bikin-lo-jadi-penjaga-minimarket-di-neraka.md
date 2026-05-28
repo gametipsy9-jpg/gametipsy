@@ -29,7 +29,9 @@ Yang paling bikin seru itu, lo nggak bisa resign. Ada sesuatu di luar toko yang 
 
 Loop utamanya itu stock barang, bikin kopi, masak hot dog, ngeladenin customer, bayar "utang" ke manajemen, dan perlahan-lahan bakal terungkap kenapa shift lo nggak pernah kelar.
 
-
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/vSPefpAiUBk?si=sJIYxLqE-ACjDJZq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## Yang Bikin Game Ini Beda
 
@@ -57,7 +59,9 @@ Ini memang bukan game yang kalau lo ceritain ke orang mereka bakal langsung tert
 
 ## Di Mana Gw Bisa Main Game Ini?
 
-
+<div style="width: 100%; overflow: hidden;">
+  <iframe src="https://store.steampowered.com/widget/4174310/" frameborder="0" style="width: 100%; height: 190px;"></iframe>
+</div>
 
 ## Spesifikasi Minimum
 
