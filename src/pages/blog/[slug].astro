@@ -85,6 +85,7 @@ const { Content } = await post.render();
           src={post.data.thumbnail}
           alt={post.data.title}
           class="w-full rounded-2xl mb-10 aspect-video object-cover"
+          fetchpriority="high"
         />
       )}
 
