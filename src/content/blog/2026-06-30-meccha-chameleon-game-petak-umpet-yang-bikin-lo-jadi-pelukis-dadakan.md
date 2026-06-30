@@ -24,7 +24,7 @@ Pas gw cari tau soal game Meccha Chameleon ini, ternyata lagi jadi salah satu ga
 
 Karena penasaran, gw langsung nyobain. Dan ternyata bener, ini salah satu game yang konsepnya simpel banget tapi entah kenapa bikin nagih parah.
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"><iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/X-65m9poaSY?si=FhOAkE6styiA_bi5" frameborder="0" allowfullscreen></iframe></div>
+
 
 ## Premis Sederhana Tapi Menarik Banget
 
@@ -34,7 +34,7 @@ Tujuan team pencari, mereka harus nemuin semua anggota tim bersembunyi sebelum w
 
 Nah bagian serunya ada di gimana cara team bersembunyi ngumpet. Karakter lo di game ini awalnya cuma bentuk badan putih polos, kayak boneka kosong belum dikasih warna.
 
-Tugas lo sebagai adalah ngecat badan lo sendiri pake warna-warna yang ada di sekitar lo, biar badan lo keliatan nyatu sama background.
+Tugas lo sebagai team Bersembunyi adalah ngecat badan lo sendiri pake warna-warna yang ada di sekitar lo, biar badan lo keliatan nyatu sama background.
 
 Misalnya lo lagi di deket lemari kayu coklat, ya lo cat badan lo jadi coklat motif kayu. Lo lagi deket rumput, ya lo cat ijo dan bikin pola kayak helaian rumput.
 
@@ -106,7 +106,7 @@ Intinya, game ini jadi bukti kalau ide simple yang dieksekusi dengan baik bisa n
 
 ## Di Mana Gw Bisa Mainin Game Ini?
 
-<div style="width: 100%; overflow: hidden;"><iframe style="width: 100%; height: 190px;" src="https://store.steampowered.com/widget/4704690/" frameborder="0"></iframe></div>
+
 
 ## System Requirements
 
