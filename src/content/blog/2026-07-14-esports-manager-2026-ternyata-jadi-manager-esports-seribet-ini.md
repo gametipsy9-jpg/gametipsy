@@ -67,7 +67,7 @@ Tiap hasil pertandingan ngaruh ke ranking organisasi lo secara keseluruhan, yang
 
 Ini salah satu fitur yang menurut gw paling unik. Ada sistem namanya ***Talk Module*** semacam fitur chat langsung sama pemain dan staff lo.
 
-Di sini lo bisa nanya kebutuhan mereka, dengerin keluhan, atau kasih semangat sebelum pertandingan. Hasil dari obrolan ini bakal ngaruh ke gameplay, bukan cuma dialog cuma-cuma doang.
+Di sini lo bisa nanya kebutuhan mereka, dengerin keluhan, atau kasih semangat sebelum pertandingan. Hasil dari obrolan ini bakal ngaruh ke gameplay, bukan dialog cuma-cuma doang.
 
 Total ada ratusan interaksi dan puluhan skenario chat berbeda yang bisa muncul tergantung situasi.
 
