@@ -24,6 +24,7 @@ Oke, sebelum lanjut, gw jelasin dulu dari nol buat yang belum pernah nyentuh gam
 Jadi di Esports Manager 2026, lo bukan main sebagai pemain. Lo main sebagai **CEO sekaligus kepala strategi** dari sebuah organisasi esports. Ada dua cara buat mulai:
 
 1. **Bikin organisasi dari nol** - mulai dari bukan siapa-siapa, belum punya nama, gak ada logo, budget pas-pasan, dan lo harus bangun semuanya sendiri dari bawah.
+
 2. **Ambil alih tim yang udah ada** - termasuk tim-tim esports yang beneran eksis di dunia nyata, lengkap sama roster pemain aslinya.
 
 Yang bikin game ini beda dari game "biasa" adalah: **nggak ada cerita, nggak ada ending, nggak ada layar "game over".**
