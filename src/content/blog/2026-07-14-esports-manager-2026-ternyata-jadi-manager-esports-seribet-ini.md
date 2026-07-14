@@ -3,7 +3,7 @@ title: "Esports Manager 2026: Ternyata Jadi Manager Esports Seribet Ini!"
 date: 2026-07-14
 category: Random Finds
 label: Worth Trying
-thumbnail: /images/uploads/Esports-Manager-2026.webp
+thumbnail: /images/uploads/esports-manager-2026.webp
 excerpt: Pertama kali gw liat trailernya, gw pikir Esports Manager 2026 ini
   bakal jadi salah satu game paling santai yang pernah gw mainin. Ternyata bikin
   gw pusing dong, tapi juga bikin penasaran parah!
