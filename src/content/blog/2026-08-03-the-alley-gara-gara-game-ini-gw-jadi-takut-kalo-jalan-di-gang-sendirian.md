@@ -67,11 +67,16 @@ Apalagi harganya juga gak semahal itu buat dimainin sampai selesai yang effect-n
 
 <div style="width: 100%; overflow: hidden;"><iframe style="width: 100%; height: 190px;" src="https://store.steampowered.com/widget/4181410/" frameborder="0"></iframe></div>
 
-Spesifikasi Minimum
+## Spesifikasi Minimum
 
 Minimum: 64-bit processor and operating system
+
 OS: Windows 10
+
 Processor: Intel Core i5-6500 or AMD FX 8350
+
 Memory: 16 GB RAM
+
 Graphics: GeForce GTX 1070 / Radeon RX 6600 or higher
+
 DirectX: Version 12
