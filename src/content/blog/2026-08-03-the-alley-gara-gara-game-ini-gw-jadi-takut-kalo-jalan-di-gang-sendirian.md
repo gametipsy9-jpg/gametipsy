@@ -35,9 +35,9 @@ Ini bagian paling unik dari The Alley. Lo gak bawa senjata atau alat detektif ca
 
 Sepanjang game, lo bakal nemuin fenomena-fenomena aneh di gang yang lo lewatin, total ada **64 fenomena** yang tersebar. Tugas lo adalah motret fenomena itu, terus nentuin apakah itu:
 
-**Aberrations** - fenomena supranatural yang beneran gak mungkin terjadi di dunia nyata, atau
+**Aberrations** - fenomena supranatural yang beneran gak mungkin terjadi di dunia nyata, atau,
 
-**Deceptions** - kejadian yang keliatannya serem tapi sebenernya masih masuk akal / bisa dijelasin secara logis
+**Deceptions** - kejadian yang keliatannya serem tapi sebenernya masih masuk akal / bisa dijelasin secara logis.
 
 Hasil foto bakal dikirim ke nenek lo di game, terus nenek bakal ngasih feedback apakah tebakan lo bener atau salah. Nebak bener, lo dapet clue buat progress cerita. Nebak salah? Ya udah, hantu makin deket.
 
